@@ -2787,6 +2787,9 @@ mxml_write_node(mxml_node_t     *node,	/* I - Node to write */
 	  {
 	    if ((*putc_cb)('\n', p) < 0)
 	      return (-1);
+		  
+	   if ((*putc_cb)(' ', p) < 0)
+	      return (-1);
 
 	    col = 0;
 	  }
